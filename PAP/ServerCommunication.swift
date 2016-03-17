@@ -44,7 +44,7 @@ func saveNewPub(){
         
         pub,
         response: {(result: AnyObject!) -> Void in
-            let obj = result as! Pub
+            //let obj = result as! Pub
             print("Pub bol ulozeny\n")
         },
         error: {(fault: Fault!) -> Void in
@@ -63,6 +63,7 @@ func findContactsAsync() {
             for obj in pub {
                 var obc = Pub()
                 obc = obj as! Pub
+                //updateContactAsync(obc)
                 deleteContactAsync(obc)
                 print("\(obc.name)")
             }
@@ -82,7 +83,7 @@ func updateContactAsync(pub:Pub) {
     dataStore.save(
         pub,
         response: { (result: AnyObject!) -> Void in
-            let updatedContact = result as! Pub
+            //let updatedContact = result as! Pub
             print("Contact has been updated")
         },
         error: { (fault: Fault!) -> Void in

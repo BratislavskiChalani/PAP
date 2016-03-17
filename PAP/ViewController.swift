@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var updateButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var getButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +26,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func saveFuction(sender: AnyObject) {
+        saveNewPub()
+    }
 
+    @IBAction func updateFunction(sender: AnyObject) {
+        findContactsAsync()
+    }
+    
+    @IBAction func getFunction(sender: AnyObject) {
+        findContactsAsync()
+    }
 }
 
