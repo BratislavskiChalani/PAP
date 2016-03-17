@@ -61,12 +61,49 @@ func findContactsAsync() {
         { (result: BackendlessCollection!) -> Void in
             let pub = result.getCurrentPage()
             for obj in pub {
-                print("\(obj)")
+                var obc = Pub()
+                obc = obj as! Pub
+                deleteContactAsync(obc)
+                print("\(obc.name)")
             }
         },
         error: { (fault: Fault!) -> Void in
             print("Server reported an error: \(fault)")
     })
+}
+
+
+func updateContactAsync(pub:Pub) {
+    let dataStore = Backendless.sharedInstance().data.of(Pub.ofClass())
+    
+    // update object asynchronously
+    pub.name = "Supermanova krcma"
+    pub.phone = "212-555-5555"
+    dataStore.save(
+        pub,
+        response: { (result: AnyObject!) -> Void in
+            let updatedContact = result as! Pub
+            print("Contact has been updated")
+        },
+        error: { (fault: Fault!) -> Void in
+            print("Server reported an error (2): \(fault)")
+    })
+}
+
+
+func deleteContactAsync(pub:Pub) {
+    
+    let dataStore = backendless.data.of(Pub.ofClass())
+    
+            dataStore.remove(
+                pub,
+                response: { (result: AnyObject!) -> Void in
+                    print("Pub has been deleted: \(result)")
+                },
+                error: { (fault: Fault!) -> Void in
+                    print("Server reported an error (2): \(fault)")
+            })
+    
 }
 
 
