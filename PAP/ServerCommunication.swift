@@ -63,8 +63,8 @@ func findContactsAsync() {
             for obj in pub {
                 var obc = Pub()
                 obc = obj as! Pub
-                //updateContactAsync(obc)
-                deleteContactAsync(obc)
+                updateContactAsync(obc)
+                //deleteContactAsync(obc)
                 print("\(obc.name)")
             }
         },
