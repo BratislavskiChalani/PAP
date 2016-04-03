@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pho-WD-Uuv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pho-WD-Uuv">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Čau-->
@@ -119,7 +119,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="hkt-ql-OMX" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="QWx-T9-wyL"/>
+                                    <segue destination="hkt-ql-OMX" kind="presentation" id="iM2-rD-tpU"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Lra-8T-i07">
@@ -158,14 +158,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UcM-QI-76J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069" y="294"/>
+            <point key="canvasLocation" x="1075" y="286"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="enJ-ej-rFU">
             <objects>
                 <viewController id="hkt-ql-OMX" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="28r-6k-3C2" colorLabel="IBBuiltInLabel-Green"/>
+                        <viewControllerLayoutGuide type="top" id="28r-6k-3C2" colorLabel="IBBuiltInLabel-Green" propertyAccessControl="localizable"/>
                         <viewControllerLayoutGuide type="bottom" id="4LM-5B-CPU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="O5q-Ov-ukZ">
