@@ -30,6 +30,9 @@
 		A8580E851C915B060081F26D /* PAPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8580E841C915B060081F26D /* PAPUITests.swift */; };
 		A869764E1C988E6F001FFCFE /* ServerCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A869764D1C988E6F001FFCFE /* ServerCommunication.swift */; };
 		B4E651876529F29A005143C6 /* Pods_PAP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6BDA52B4653CD07D0A46F0 /* Pods_PAP.framework */; };
+		E87F4D521CAD0B3A005533B4 /* LoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F4D511CAD0B3A005533B4 /* LoginScreenVC.swift */; };
+		E87F4D541CAFDA02005533B4 /* BrowseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F4D531CAFDA02005533B4 /* BrowseVC.swift */; };
+		E87F4D561CAFDF10005533B4 /* AddNewPubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F4D551CAFDF10005533B4 /* AddNewPubVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +255,9 @@
 		A8580E861C915B060081F26D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A869764D1C988E6F001FFCFE /* ServerCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerCommunication.swift; sourceTree = "<group>"; };
 		CF6BDA52B4653CD07D0A46F0 /* Pods_PAP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PAP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E87F4D511CAD0B3A005533B4 /* LoginScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenVC.swift; sourceTree = "<group>"; };
+		E87F4D531CAFDA02005533B4 /* BrowseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseVC.swift; sourceTree = "<group>"; };
+		E87F4D551CAFDF10005533B4 /* AddNewPubVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewPubVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -709,9 +715,12 @@
 				A8580E661C915B060081F26D /* ViewController.swift */,
 				A8580E681C915B060081F26D /* Main.storyboard */,
 				A8580E6B1C915B060081F26D /* Assets.xcassets */,
+				E87F4D531CAFDA02005533B4 /* BrowseVC.swift */,
 				A8580E6D1C915B060081F26D /* LaunchScreen.storyboard */,
 				A8580E701C915B060081F26D /* Info.plist */,
+				E87F4D551CAFDF10005533B4 /* AddNewPubVC.swift */,
 				A869764D1C988E6F001FFCFE /* ServerCommunication.swift */,
+				E87F4D511CAD0B3A005533B4 /* LoginScreenVC.swift */,
 			);
 			path = PAP;
 			sourceTree = "<group>";
@@ -916,8 +925,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E87F4D521CAD0B3A005533B4 /* LoginScreenVC.swift in Sources */,
 				A8580E671C915B060081F26D /* ViewController.swift in Sources */,
 				A869764E1C988E6F001FFCFE /* ServerCommunication.swift in Sources */,
+				E87F4D561CAFDF10005533B4 /* AddNewPubVC.swift in Sources */,
+				E87F4D541CAFDA02005533B4 /* BrowseVC.swift in Sources */,
 				A8580E651C915B060081F26D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
