@@ -27,15 +27,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func saveFuction(sender: AnyObject) {
-        saveNewPub()
     }
 
     @IBAction func updateFunction(sender: AnyObject) {
-        findContactsAsync()
     }
     
     @IBAction func getFunction(sender: AnyObject) {
-        findContactsAsync()
     }
 }
 
