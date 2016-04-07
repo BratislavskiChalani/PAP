@@ -393,13 +393,21 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="1id-ay-5o0" id="zMy-O2-1My"/>
+                        <outlet property="address" destination="Htp-mf-q5X" id="GIc-Lr-J8R"/>
+                        <outlet property="openningHours" destination="k0g-RR-HdG" id="9Lx-fz-DRa"/>
+                        <outlet property="phone" destination="a5h-V9-A0E" id="e0r-I7-xbe"/>
                         <outlet property="pubName" destination="wLe-db-c2Q" id="ASP-Tp-i68"/>
                         <outlet property="rating" destination="qPA-A5-kxt" id="ilX-4d-aiV"/>
+                        <outlet property="ratingAtmosphere" destination="XyC-ao-vfk" id="XFB-do-dfM"/>
+                        <outlet property="ratingChicks" destination="aFm-hm-CvH" id="ZUC-wS-Fxq"/>
+                        <outlet property="ratingPrices" destination="qPA-A5-kxt" id="aLH-t2-ZRg"/>
+                        <outlet property="ratingStaff" destination="ike-jL-spw" id="VAl-iO-UDj"/>
+                        <outlet property="smoking" destination="3qu-zI-rsh" id="0NJ-Te-TOU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0h-Pd-IBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1794" y="-521"/>
+            <point key="canvasLocation" x="1952" y="-549"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HIE-dT-Zks">

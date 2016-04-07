@@ -64,6 +64,7 @@ func POSTData(name: String, address: String, phone: String, openningHours: Strin
     request.HTTPMethod="POST"
     
     let jsonData: Dictionary<String, AnyObject> = ["name": name, "address": address, "phone": phone, "openigHours": openningHours, "photo": photo, "rating": rating, "ratingChicks": ratingChicks, "ratingAtmosphere": ratingAtmosphere, "ratingPrices": ratingPrices, "ratingStaff": ratingStaff, "smoking": smoking]
+    //print(jsonData)
     
     request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(jsonData, options: [])
     
@@ -75,6 +76,7 @@ func POSTData(name: String, address: String, phone: String, openningHours: Strin
         
         do {
             if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
+                print(json)
                 let success = json["success"] as? Int
                 print("Success: \(success)")
             } else {
