@@ -12,8 +12,6 @@ class BrowseVC: UIViewController, UICollectionViewDataSource,UICollectionViewDel
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var pubs = Array<String>()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,7 +45,8 @@ class BrowseVC: UIViewController, UICollectionViewDataSource,UICollectionViewDel
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("browseCell", forIndexPath: indexPath) as! BrowseCollectionViewCell
         
         cell.collectionImageView.image = UIImage(named: "homer_intro")
-        cell.collectionLabel.text = "Homer je kok"
+        cell.collectionLabel.text = pubs[indexPath.row]._name
+        print(pubs[indexPath.row]._name)
         
         return cell
     }

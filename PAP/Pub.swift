@@ -13,6 +13,9 @@
 
 import Foundation
 
+
+var pubs=[Pub]()
+
 class Pub : NSObject{
     var _id:String?
     var _name:String?
@@ -43,4 +46,23 @@ class Pub : NSObject{
     }
 }
 
-var pubs=[Pub]()
+
+func parseDATA(data: NSData){
+    
+    do{
+        let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
+        
+        let allJsons = json.valueForKey("data") as! NSArray
+        
+        for i in allJsons{
+            
+            let actual = i as! Dictionary<String, AnyObject>
+            if let id = actual["objectId"] as? String, let name=actual["name"] as? String, let address=actual["address"] as? String, let phone=actual["phone"] as? String ,let opennigHours=actual["openningHours"] as? String, let photo=actual["photo"] as? String, let rating=actual["rating"] as? Double, let ratingChicks=actual["ratingChicks"] as? Double, let ratingAtmosphere=actual["ratingAtmosphere"] as? Double, let ratingPrices=actual["ratingPrices"] as? Double, let ratingStaff=actual["ratingStaff"] as? Double, let smoking=actual["smoking"] as? Bool{
+                pubs.append(Pub(id: id, name: name, address: address, phone: phone, openningHours: opennigHours, photo: photo, rating: rating, ratingChicks: ratingChicks, ratingAtmosphere: ratingAtmosphere, ratingPrices: ratingPrices, ratingStaff: ratingStaff, smoking: smoking ))
+            }
+        }
+        
+    }catch{
+        print("Could not serialize")
+    }
+}
