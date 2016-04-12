@@ -39,10 +39,20 @@ class ChooseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         switch indexPath.row {
             
-            case 0 : cell.nameLabel.text = "Beer"
-                    cell.drinkImageView.image = UIImage(named: "homer_intro")
-            case 1 : cell.nameLabel.text = "Drink"
-                cell.drinkImageView.image = UIImage(named: "homer_intro")
+            case 0 : cell.nameLabel.text = "All"
+                    cell.drinkImageView.image = UIImage(named: "all")
+            case 1 : cell.nameLabel.text = "Beer"
+                cell.drinkImageView.image = UIImage(named: "beer")
+            case 2 : cell.nameLabel.text = "Wine"
+                cell.drinkImageView.image = UIImage(named: "wine")
+            case 3 : cell.nameLabel.text = "Shots"
+                cell.drinkImageView.image = UIImage(named: "shots")
+            case 4 : cell.nameLabel.text = "Coctails"
+                cell.drinkImageView.image = UIImage(named: "coctails")
+            case 5 : cell.nameLabel.text = ""
+                cell.drinkImageView.image = UIImage(named: "")
+            case 6 : cell.nameLabel.text = "Log out"
+                cell.drinkImageView.image = UIImage(named: "logout")
         
             default : break
             
@@ -53,17 +63,18 @@ class ChooseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 7
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        if indexPath.row == 1 {
-            
-            
+        if indexPath.row == 0 {
             self.performSegueWithIdentifier("showBrowse", sender: self)
+        if indexPath.row == 6 {
+            self.performSegueWithIdentifier("", sender: self)
+            }
             
         }
         
