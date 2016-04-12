@@ -1,6 +1,0 @@
-framework module Pods_PAP {
-  umbrella header "Pods-PAP-umbrella.h"
-
-  export *
-  module * { export * }
-}

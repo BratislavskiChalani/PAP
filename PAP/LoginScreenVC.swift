@@ -27,10 +27,10 @@ class LoginScreenVC: UIViewController {
     //button na prechod- daj vyskakovacie okno if wrong pass
     @IBAction func actionButtonLogin(sender: AnyObject) {
         
-        //if ((userNameField.text == "ahoj@cau.sk") && (passwordField.text == "heslo"))
-        //{
+        if ((userNameField.text == "ahoj@cau.sk") && (passwordField.text == "heslo"))
+        {
         self.performSegueWithIdentifier("fromLoginToList", sender: self)
-        //}
+        }
         
     }
 

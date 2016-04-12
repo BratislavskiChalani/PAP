@@ -8,11 +8,18 @@
 
 import UIKit
 
-class BrowseVC: UIViewController {
-
+class BrowseVC: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var pubs = Array<String>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +31,31 @@ class BrowseVC: UIViewController {
     
     @IBAction func newButton(sender: AnyObject) {
         self.performSegueWithIdentifier("fromLoginToList", sender: self)
+    }
+    
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return pubs.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("browseCell", forIndexPath: indexPath) as! BrowseCollectionViewCell
+        
+        cell.collectionImageView.image = UIImage(named: "homer_intro")
+        cell.collectionLabel.text = "Homer je kok"
+        
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        
     }
     
 
