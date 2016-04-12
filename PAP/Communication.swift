@@ -28,22 +28,7 @@ func GETData(){
         
         if let responseData = data
         {
-            do{
-                let json = try NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions.AllowFragments)
-                
-                let allJsons = json.valueForKey("data") as! NSArray
-                
-                for i in allJsons{
-                    
-                    let actual = i as! Dictionary<String, AnyObject>
-                    if let id = actual["objectId"] as? String, let name=actual["name"] as? String, let address=actual["address"] as? String, let phone=actual["phone"] as? String ,let opennigHours=actual["openingHours"] as? String, let photo=actual["photo"] as? String, let rating=actual["rating"] as? Double, let ratingChicks=actual["ratingChicks"] as? Double, let ratingAtmosphere=actual["ratingAtmosphere"] as? Double, let ratingPrices=actual["ratingPrices"] as? Double, let ratingStaff=actual["ratingStaff"] as? Double, let smoking=actual["smoking"] as? Bool{
-                        pubs.append(Pub(id: id, name: name, address: address, phone: phone, openningHours: opennigHours, photo: photo, rating: rating, ratingChicks: ratingChicks, ratingAtmosphere: ratingAtmosphere, ratingPrices: ratingPrices, ratingStaff: ratingStaff, smoking: smoking ))
-                    }
-                }
-                
-            }catch{
-                print("Could not serialize")
-            }
+            parseDATA(responseData)
         }
         
         }.resume()
