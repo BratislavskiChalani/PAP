@@ -11,12 +11,14 @@ import Foundation
 
 //funkcia pre ziskavanie dat zo servera a ich nasledne ulozenie do pola "pubs", aby sme ich nemuseli stale stahovat
 
-let urlString: String = "https://api.backendless.com/v1/data/Pub"
+var urlString: String = "https://api.backendless.com/v1/data/Pub"
 let applicationId: String = "CB726D93-4CCC-6420-FF51-FC1CF6154500"
 let secretKey: String = "6C433549-8AD9-E14F-FFB3-C03C5FC53200"
+var offset: Int = 0
 
 func GETData(){
 
+    urlString = "https://api.backendless.com/v1/data/Pub?pageSize=10&offset="+String(offset)
     let session = NSURLSession.sharedSession()
     let url = NSURL(string: urlString)!
     let request = NSMutableURLRequest(URL: url)

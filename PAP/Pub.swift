@@ -15,6 +15,7 @@ import Foundation
 
 
 var pubs=[Pub]()
+var actual: Int?
 
 class Pub : NSObject{
     var _id:String?
@@ -53,6 +54,11 @@ func parseDATA(data: NSData){
         let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
         
         let allJsons = json.valueForKey("data") as! NSArray
+        if allJsons.count == 0
+        {
+            offset-=10
+            return
+        }
         
         for i in allJsons{
             
