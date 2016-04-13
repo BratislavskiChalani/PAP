@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lbn-BN-pjI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lbn-BN-pjI">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -778,6 +778,17 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addressLabel" destination="ouW-1j-bGK" id="inO-v8-FVc"/>
+                        <outlet property="hoursLabel" destination="ifx-Nb-2vP" id="nok-La-Le5"/>
+                        <outlet property="phoneLabel" destination="bfS-K9-tfh" id="Rwy-kS-DbC"/>
+                        <outlet property="rating" destination="pf7-YU-vVf" id="PR4-PQ-Hxn"/>
+                        <outlet property="ratingAtmosphere" destination="hP6-yr-jBd" id="NNc-IX-cxi"/>
+                        <outlet property="ratingChicks" destination="XRg-bh-S63" id="yPe-GI-diS"/>
+                        <outlet property="ratingPrices" destination="aEh-pk-ihg" id="CYr-JV-XHY"/>
+                        <outlet property="ratingStaff" destination="GZ0-Y1-Qt0" id="kKY-C0-XN7"/>
+                        <outlet property="smokingLabel" destination="Jm1-lz-jGI" id="IU4-5k-fGO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIT-tt-aEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

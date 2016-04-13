@@ -37,7 +37,7 @@ class BrowseVC: UIViewController, UICollectionViewDataSource,UICollectionViewDel
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return pubs.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -46,15 +46,24 @@ class BrowseVC: UIViewController, UICollectionViewDataSource,UICollectionViewDel
         
         cell.collectionImageView.image = UIImage(named: "homer_intro")
         cell.collectionLabel.text = pubs[indexPath.row]._name
-        print(pubs[indexPath.row]._name)
         
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        actual=indexPath.row
+    }
+    
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
         
-        
-        
+        if offsetY > contentHeight - scrollView.frame.size.height {
+            offset+=10
+            GETData()
+            self.collectionView.reloadData()
+        }
     }
     
 

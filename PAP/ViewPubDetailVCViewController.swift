@@ -10,9 +10,40 @@ import UIKit
 
 class ViewPubDetailVCViewController: UIViewController {
 
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var hoursLabel: UILabel!
+    @IBOutlet weak var smokingLabel: UILabel!
+    @IBOutlet weak var rating: UIImageView!
+    @IBOutlet weak var ratingPrices: UIImageView!
+    @IBOutlet weak var ratingStaff: UIImageView!
+    @IBOutlet weak var ratingAtmosphere: UIImageView!
+    @IBOutlet weak var ratingChicks: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("ACTUAL: "+String(actual))
+        
+        
+        print("star"+String(round(pubs[actual!]._ratingAtmosphere!)))
+        self.title=pubs[actual!]._name
+        addressLabel.text=pubs[actual!]._address
+        phoneLabel.text=pubs[actual!]._phone
+        hoursLabel.text=pubs[actual!]._openingHours
+        if pubs[actual!]._smoking{
+            smokingLabel.text="FAJČÁRSKE"
+        }
+        else{
+            smokingLabel.text="SILNO NEFAJČÁRSKE"
+        }
+        
+        
+        ratingPrices.image = UIImage(named: "star"+String(round(pubs[actual!]._ratingPrices!)))
+        ratingStaff.image = UIImage(named: "star"+String(round(pubs[actual!]._ratingStaff!)))
+        ratingAtmosphere.image = UIImage(named: "star"+String(round(pubs[actual!]._ratingAtmosphere!)))
+        ratingChicks.image = UIImage(named: "star"+String(round(pubs[actual!]._ratingChicks!)))
+        
+        
         // Do any additional setup after loading the view.
     }
 
