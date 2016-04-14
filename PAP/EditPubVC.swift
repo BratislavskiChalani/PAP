@@ -44,6 +44,12 @@ class EditPubVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    func update(){
+    
+    
+    }
 
     /*
     // MARK: - Navigation
