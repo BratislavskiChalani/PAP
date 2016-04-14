@@ -30,6 +30,7 @@
 		A8CA0B831CBED89B004ED5E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CA0B821CBED89B004ED5E8 /* Assets.xcassets */; };
 		E81EF5101CBCFD0400ED7B80 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81EF50F1CBCFD0400ED7B80 /* ChooseViewController.swift */; };
 		E81EF5121CBCFDCC00ED7B80 /* ChooseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81EF5111CBCFDCC00ED7B80 /* ChooseTableViewCell.swift */; };
+		E82ABDB61CBF72D90001476A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82ABDB51CBF72D90001476A /* MapKit.framework */; };
 		E87F4D521CAD0B3A005533B4 /* LoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F4D511CAD0B3A005533B4 /* LoginScreenVC.swift */; };
 		E87F4D541CAFDA02005533B4 /* BrowseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F4D531CAFDA02005533B4 /* BrowseVC.swift */; };
 		E87F4D561CAFDF10005533B4 /* AddNewPubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F4D551CAFDF10005533B4 /* AddNewPubVC.swift */; };
@@ -259,6 +260,7 @@
 		A8CA0B821CBED89B004ED5E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = PAP/Assets.xcassets; sourceTree = "<group>"; };
 		E81EF50F1CBCFD0400ED7B80 /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		E81EF5111CBCFDCC00ED7B80 /* ChooseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseTableViewCell.swift; sourceTree = "<group>"; };
+		E82ABDB51CBF72D90001476A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E87F4D511CAD0B3A005533B4 /* LoginScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenVC.swift; sourceTree = "<group>"; };
 		E87F4D531CAFDA02005533B4 /* BrowseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseVC.swift; sourceTree = "<group>"; };
 		E87F4D551CAFDF10005533B4 /* AddNewPubVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewPubVC.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				A85393EE1C96FB7100B7ADF3 /* libspeex.a in Frameworks */,
 				A85393171C96FB4000B7ADF3 /* libz.tbd in Frameworks */,
 				A85393151C96FB3600B7ADF3 /* libsqlite3.tbd in Frameworks */,
+				E82ABDB61CBF72D90001476A /* MapKit.framework in Frameworks */,
 				A85393EF1C96FB7100B7ADF3 /* libx264.a in Frameworks */,
 				A85393ED1C96FB7100B7ADF3 /* MediaLibiOS.a in Frameworks */,
 				A85393131C96FB2600B7ADF3 /* SystemConfiguration.framework in Frameworks */,
@@ -312,6 +315,7 @@
 		7830DCBB7A694F8FB31A1CD0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E82ABDB51CBF72D90001476A /* MapKit.framework */,
 				A8CA0B821CBED89B004ED5E8 /* Assets.xcassets */,
 			);
 			name = Frameworks;
@@ -834,6 +838,9 @@
 						CreatedOnToolsVersion = 7.2.1;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
 						};

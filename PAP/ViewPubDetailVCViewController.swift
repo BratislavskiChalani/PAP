@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import MapKit
 
-class ViewPubDetailVCViewController: UIViewController {
+
+
+class ViewPubDetailVCViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
@@ -19,6 +22,9 @@ class ViewPubDetailVCViewController: UIViewController {
     @IBOutlet weak var ratingStaff: UIImageView!
     @IBOutlet weak var ratingAtmosphere: UIImageView!
     @IBOutlet weak var ratingChicks: UIImageView!
+    @IBOutlet weak var mapView: MKMapView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
