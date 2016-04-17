@@ -12,10 +12,10 @@
 
 
 import Foundation
-
+import UIKit
 
 var pubs=[Pub]()
-var actual: Int?
+var actual: Pub!
 
 class Pub : NSObject{
     var _id:String?
@@ -30,6 +30,7 @@ class Pub : NSObject{
     var _ratingPrices:Double?
     var _ratingStaff:Double?
     var _smoking:Bool = true
+    var _image: UIImage!
     
     init(id: String, name: String, address: String, phone: String, openningHours: String, photo: String,rating: Double, ratingChicks: Double, ratingAtmosphere: Double, ratingPrices: Double, ratingStaff: Double, smoking: Bool) {
         _id=id
@@ -44,6 +45,11 @@ class Pub : NSObject{
         _ratingPrices=ratingPrices
         _ratingStaff=ratingStaff
         _smoking=smoking
+        
+        let url = NSURL(string: photo)
+        let data = NSData(contentsOfURL: url!)
+        _image=UIImage(data: data!)
+        print("Pridane: "+name)
     }
 }
 
@@ -52,13 +58,9 @@ func parseDATA(data: NSData){
     
     do{
         let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
+        print(json)
         
         let allJsons = json.valueForKey("data") as! NSArray
-        if allJsons.count == 0
-        {
-            offset-=10
-            return
-        }
         
         for i in allJsons{
             

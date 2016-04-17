@@ -7,20 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29825C6E280EFC6D37CE663B /* Pods_PAP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838CA50CD1922A8036012E57 /* Pods_PAP.framework */; };
+		2BE687281CC2ACFF0016EDFC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE687271CC2ACFE0016EDFC /* Reachability.swift */; };
 		A85393131C96FB2600B7ADF3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A85393121C96FB2600B7ADF3 /* SystemConfiguration.framework */; };
-		A85393151C96FB3600B7ADF3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A85393141C96FB3600B7ADF3 /* libsqlite3.tbd */; };
-		A85393171C96FB4000B7ADF3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A85393161C96FB4000B7ADF3 /* libz.tbd */; };
-		A85393E51C96FB7100B7ADF3 /* backendless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A853931A1C96FB7100B7ADF3 /* backendless.a */; };
-		A85393E61C96FB7100B7ADF3 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A853935E1C96FB7100B7ADF3 /* CommLibiOS.a */; };
-		A85393E71C96FB7100B7ADF3 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85393C51C96FB7100B7ADF3 /* libavcodec.a */; };
-		A85393E81C96FB7100B7ADF3 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85393C61C96FB7100B7ADF3 /* libavdevice.a */; };
-		A85393E91C96FB7100B7ADF3 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85393C71C96FB7100B7ADF3 /* libavfilter.a */; };
-		A85393EA1C96FB7100B7ADF3 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85393C81C96FB7100B7ADF3 /* libavformat.a */; };
-		A85393EB1C96FB7100B7ADF3 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85393C91C96FB7100B7ADF3 /* libavutil.a */; };
-		A85393EC1C96FB7100B7ADF3 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85393CA1C96FB7100B7ADF3 /* libswscale.a */; };
-		A85393ED1C96FB7100B7ADF3 /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85393D31C96FB7100B7ADF3 /* MediaLibiOS.a */; };
-		A85393EE1C96FB7100B7ADF3 /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85393DE1C96FB7100B7ADF3 /* libspeex.a */; };
-		A85393EF1C96FB7100B7ADF3 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85393E41C96FB7100B7ADF3 /* libx264.a */; };
 		A8580E651C915B060081F26D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8580E641C915B060081F26D /* AppDelegate.swift */; };
 		A8580E671C915B060081F26D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8580E661C915B060081F26D /* ViewController.swift */; };
 		A8580E6A1C915B060081F26D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8580E681C915B060081F26D /* Main.storyboard */; };
@@ -60,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BE687271CC2ACFE0016EDFC /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		838CA50CD1922A8036012E57 /* Pods_PAP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PAP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A85393121C96FB2600B7ADF3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A85393141C96FB3600B7ADF3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A85393161C96FB4000B7ADF3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -270,6 +261,8 @@
 		E89D59391CB24D6100C91726 /* Pub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pub.swift; sourceTree = "<group>"; };
 		E8D4A1171CBEA07200C533CB /* ViewPubDetailVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPubDetailVCViewController.swift; sourceTree = "<group>"; };
 		E8D4A1191CBEA11B00C533CB /* EditPubVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPubVC.swift; sourceTree = "<group>"; };
+		FBBA3C4B73DE3528D839C614 /* Pods-PAP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PAP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PAP/Pods-PAP.debug.xcconfig"; sourceTree = "<group>"; };
+		FC61A8B728A78392A353BD57 /* Pods-PAP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PAP.release.xcconfig"; path = "Pods/Target Support Files/Pods-PAP/Pods-PAP.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,21 +270,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A85393EB1C96FB7100B7ADF3 /* libavutil.a in Frameworks */,
-				A85393E91C96FB7100B7ADF3 /* libavfilter.a in Frameworks */,
-				A85393EC1C96FB7100B7ADF3 /* libswscale.a in Frameworks */,
-				A85393E81C96FB7100B7ADF3 /* libavdevice.a in Frameworks */,
-				A85393EE1C96FB7100B7ADF3 /* libspeex.a in Frameworks */,
-				A85393171C96FB4000B7ADF3 /* libz.tbd in Frameworks */,
-				A85393151C96FB3600B7ADF3 /* libsqlite3.tbd in Frameworks */,
 				E82ABDB61CBF72D90001476A /* MapKit.framework in Frameworks */,
-				A85393EF1C96FB7100B7ADF3 /* libx264.a in Frameworks */,
-				A85393ED1C96FB7100B7ADF3 /* MediaLibiOS.a in Frameworks */,
 				A85393131C96FB2600B7ADF3 /* SystemConfiguration.framework in Frameworks */,
-				A85393E51C96FB7100B7ADF3 /* backendless.a in Frameworks */,
-				A85393EA1C96FB7100B7ADF3 /* libavformat.a in Frameworks */,
-				A85393E61C96FB7100B7ADF3 /* CommLibiOS.a in Frameworks */,
-				A85393E71C96FB7100B7ADF3 /* libavcodec.a in Frameworks */,
+				29825C6E280EFC6D37CE663B /* Pods_PAP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +298,7 @@
 			children = (
 				E82ABDB51CBF72D90001476A /* MapKit.framework */,
 				A8CA0B821CBED89B004ED5E8 /* Assets.xcassets */,
+				838CA50CD1922A8036012E57 /* Pods_PAP.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -698,6 +680,7 @@
 				A8580E831C915B060081F26D /* PAPUITests */,
 				A8580E621C915B060081F26D /* Products */,
 				7830DCBB7A694F8FB31A1CD0 /* Frameworks */,
+				C3FE269534A8932C8E84BC0C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -718,6 +701,7 @@
 				E89D036C1CBCF20F0056136F /* controller */,
 				A8580E641C915B060081F26D /* AppDelegate.swift */,
 				A8580E681C915B060081F26D /* Main.storyboard */,
+				2BE687271CC2ACFE0016EDFC /* Reachability.swift */,
 				E89D036A1CB642C90056136F /* BrowseViewCell.swift */,
 				E89D59381CB24D6100C91726 /* Communication.swift */,
 				E89D59391CB24D6100C91726 /* Pub.swift */,
@@ -743,6 +727,15 @@
 				A8580E861C915B060081F26D /* Info.plist */,
 			);
 			path = PAPUITests;
+			sourceTree = "<group>";
+		};
+		C3FE269534A8932C8E84BC0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FBBA3C4B73DE3528D839C614 /* Pods-PAP.debug.xcconfig */,
+				FC61A8B728A78392A353BD57 /* Pods-PAP.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		E81EF5081CBCF82600ED7B80 /* view */ = {
@@ -775,9 +768,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8580E891C915B060081F26D /* Build configuration list for PBXNativeTarget "PAP" */;
 			buildPhases = (
+				2E4030143A05344D72615CCD /* Check Pods Manifest.lock */,
 				A8580E5D1C915B060081F26D /* Sources */,
 				A8580E5E1C915B060081F26D /* Frameworks */,
 				A8580E5F1C915B060081F26D /* Resources */,
+				F3466D9D6FCCAF298D4C5556 /* Embed Pods Frameworks */,
+				6BA33423AAC6FAFB1983D9B8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -836,6 +832,7 @@
 				TargetAttributes = {
 					A8580E601C915B060081F26D = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = W4L9W5A3AT;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -855,7 +852,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A8580E5C1C915B060081F26D /* Build configuration list for PBXProject "PAP" */;
+			buildConfigurationList = A8580E5C1C915B060081F26D /* Build configuration list for PBXProject "pap" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -902,11 +899,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E4030143A05344D72615CCD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6BA33423AAC6FAFB1983D9B8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PAP/Pods-PAP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3466D9D6FCCAF298D4C5556 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PAP/Pods-PAP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A8580E5D1C915B060081F26D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE687281CC2ACFF0016EDFC /* Reachability.swift in Sources */,
 				E8D4A11A1CBEA11B00C533CB /* EditPubVC.swift in Sources */,
 				E87F4D521CAD0B3A005533B4 /* LoginScreenVC.swift in Sources */,
 				A8580E671C915B060081F26D /* ViewController.swift in Sources */,
@@ -1057,45 +1103,35 @@
 		};
 		A8580E8A1C915B060081F26D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBBA3C4B73DE3528D839C614 /* Pods-PAP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PAP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/lib/**",
-					"$(inherited)/**",
-					"$(PROJECT_DIR)/lib/backendless",
-					"$(PROJECT_DIR)/lib/CommLibiOS",
-					"$(PROJECT_DIR)/lib/libav-11.4/lib",
-					"$(PROJECT_DIR)/lib/MediaLibiOS3x",
-					"$(PROJECT_DIR)/lib/speex-1.2rc2/lib",
-					"$(PROJECT_DIR)/lib/x264/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)/**";
 				PRODUCT_BUNDLE_IDENTIFIER = "MTAA-project.PAP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/lib/backendless/include/Backendless-Bridging-Header.h";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
 		A8580E8B1C915B060081F26D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC61A8B728A78392A353BD57 /* Pods-PAP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PAP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/lib/**",
-					"$(inherited)/**",
-					"$(PROJECT_DIR)/lib/backendless",
-					"$(PROJECT_DIR)/lib/CommLibiOS",
-					"$(PROJECT_DIR)/lib/libav-11.4/lib",
-					"$(PROJECT_DIR)/lib/MediaLibiOS3x",
-					"$(PROJECT_DIR)/lib/speex-1.2rc2/lib",
-					"$(PROJECT_DIR)/lib/x264/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)/**";
 				PRODUCT_BUNDLE_IDENTIFIER = "MTAA-project.PAP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/lib/backendless/include/Backendless-Bridging-Header.h";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -1150,7 +1186,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A8580E5C1C915B060081F26D /* Build configuration list for PBXProject "PAP" */ = {
+		A8580E5C1C915B060081F26D /* Build configuration list for PBXProject "pap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A8580E871C915B060081F26D /* Debug */,

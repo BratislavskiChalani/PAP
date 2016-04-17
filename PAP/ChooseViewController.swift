@@ -63,20 +63,28 @@ class ChooseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return 7
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        if indexPath.row == 0 {
-            self.performSegueWithIdentifier("showBrowse", sender: self)
-        if indexPath.row == 6 {
-            self.performSegueWithIdentifier("", sender: self)
-            }
-            
+        pubs.removeAll()
+        print(indexPath.row)
+        if indexPath.row == 6{
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("LogIn")
+            self.presentViewController(nextViewController, animated:true, completion:nil)
         }
+        let myCategory: Int! = indexPath.row
+        
+        getData(myCategory) { data in
+            
+            self.performSegueWithIdentifier("showBrowse", sender: self)
+
+        }
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
     }
 

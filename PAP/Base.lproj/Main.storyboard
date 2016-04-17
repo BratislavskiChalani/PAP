@@ -10,7 +10,7 @@
         <!--Title-->
         <scene sceneID="G2h-gr-g5x">
             <objects>
-                <viewController id="Lbn-BN-pjI" customClass="LoginScreenVC" customModule="PAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogIn" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lbn-BN-pjI" customClass="LoginScreenVC" customModule="PAP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5n3-rf-naS"/>
                         <viewControllerLayoutGuide type="bottom" id="zT3-6w-nln"/>
@@ -170,7 +170,7 @@
         <!--Browse pubs-->
         <scene sceneID="cgK-bh-deW">
             <objects>
-                <viewController id="wqP-9v-OWB" customClass="BrowseVC" customModule="PAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Browse" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wqP-9v-OWB" customClass="BrowseVC" customModule="PAP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8VH-3R-ags"/>
                         <viewControllerLayoutGuide type="bottom" id="b2Z-Sm-kOt"/>
@@ -514,10 +514,15 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add new pub" id="dMb-ld-eok">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Coy-Vk-xir"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Coy-Vk-xir">
+                            <connections>
+                                <action selector="saveData:" destination="4vs-Xi-Yiz" id="w8U-PV-4ty"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="address" destination="Htp-mf-q5X" id="GIc-Lr-J8R"/>
+                        <outlet property="imageUrl" destination="CFY-yK-uaF" id="QxW-Ha-dkm"/>
                         <outlet property="openningHours" destination="k0g-RR-HdG" id="9Lx-fz-DRa"/>
                         <outlet property="phone" destination="a5h-V9-A0E" id="e0r-I7-xbe"/>
                         <outlet property="pubName" destination="wLe-db-c2Q" id="ASP-Tp-i68"/>
@@ -536,7 +541,7 @@
         <!--Navigation Controller-->
         <scene sceneID="HIE-dT-Zks">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pho-WD-Uuv" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Pho-WD-Uuv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="abG-ee-ks3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -563,7 +568,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xwK-qL-R8h">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xwK-qL-R8h">
                                 <rect key="frame" x="20" y="72" width="335" height="116"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="335" id="2D4-oR-PN8"/>
@@ -790,6 +795,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addressLabel" destination="ouW-1j-bGK" id="inO-v8-FVc"/>
+                        <outlet property="entranceImage" destination="xwK-qL-R8h" id="TuI-xS-uIc"/>
                         <outlet property="hoursLabel" destination="ifx-Nb-2vP" id="nok-La-Le5"/>
                         <outlet property="mapView" destination="Cw1-om-67q" id="T5B-tG-Tei"/>
                         <outlet property="phoneLabel" destination="bfS-K9-tfh" id="Rwy-kS-DbC"/>
@@ -1029,28 +1035,37 @@
                             </mask>
                         </variation>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem id="b8r-vg-V0I"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Edit pubName" id="kw2-Fz-JSy">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="BMR-Cw-kPs"/>
+                        <barButtonItem key="leftBarButtonItem" id="b8r-vg-V0I">
+                            <connections>
+                                <action selector="saveNewData:" destination="pjX-ua-IkQ" id="MvI-z7-vT2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="BMR-Cw-kPs">
+                            <connections>
+                                <action selector="deletePub:" destination="pjX-ua-IkQ" id="Fab-83-U7l"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addressField" destination="hZW-6e-LED" id="Mpz-Eu-tVi"/>
                         <outlet property="atmosphereSlider" destination="C6Z-q2-wYZ" id="2g0-yI-Chi"/>
                         <outlet property="chicksSlider" destination="ca8-5h-TWn" id="11V-Y9-Yj7"/>
+                        <outlet property="deleteButton" destination="BMR-Cw-kPs" id="B8e-9P-J5r"/>
                         <outlet property="hoursField" destination="mqw-4v-0Qn" id="FmC-Pb-pKA"/>
                         <outlet property="imageField" destination="SG2-hz-9KO" id="SPj-C4-0zw"/>
                         <outlet property="nameField" destination="O6i-Ht-c8p" id="zZm-v1-vkj"/>
                         <outlet property="phoneField" destination="87L-cl-53N" id="ZGX-cS-AHB"/>
                         <outlet property="pricesSlider" destination="tQz-2J-bDI" id="IuP-M3-fBi"/>
+                        <outlet property="saveButton" destination="b8r-vg-V0I" id="5zf-Aj-0MN"/>
                         <outlet property="smokingSwitch" destination="HJN-MU-8df" id="C7q-m9-qKV"/>
                         <outlet property="staffSlider" destination="5B0-Rq-q4q" id="vGU-FI-qug"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgr-h2-BkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3460.5" y="287.5"/>
+            <point key="canvasLocation" x="3548.5" y="242.5"/>
         </scene>
     </scenes>
     <resources>

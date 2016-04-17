@@ -1,2 +1,0 @@
-# PAP
-MTAA_project

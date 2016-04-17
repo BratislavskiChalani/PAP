@@ -16,6 +16,26 @@ class LoginScreenVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewDidAppear(animated: Bool) {
+        
+        let connectionReachability = Reachability()
+        
+        if connectionReachability.isConnectedToNetwork() == true {
+            print("Internet connection OK")
+            
+        } else {
+            
+            print("Internet connection FAILED")
+            
+            let alert = UIAlertController(title: "Internet connection", message: "You have not internet connection right now.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

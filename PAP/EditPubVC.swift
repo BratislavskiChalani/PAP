@@ -20,21 +20,26 @@ class EditPubVC: UIViewController {
     @IBOutlet weak var staffSlider: UISlider!
     @IBOutlet weak var atmosphereSlider: UISlider!
     @IBOutlet weak var chicksSlider: UISlider!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var deleteButton: UIBarButtonItem!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageField.text=pubs[actual!]._photo
-        nameField.text=pubs[actual!]._name
-        addressField.text=pubs[actual!]._address
-        phoneField.text=pubs[actual!]._phone
-        hoursField.text=pubs[actual!]._openingHours
-        smokingSwitch.setOn(pubs[actual!]._smoking, animated:true)
-        pricesSlider.setValue(Float(pubs[actual!]._ratingPrices!)/5, animated: true)
-        staffSlider.setValue(Float(pubs[actual!]._ratingStaff!)/5, animated: true)
-        atmosphereSlider.setValue(Float(pubs[actual!]._ratingAtmosphere!)/5, animated: true)
-        chicksSlider.setValue(Float(pubs[actual!]._ratingChicks!)/5, animated: true)
+        saveButton.title = "SAVE"
+        
+        imageField.text=actual._photo
+        nameField.text=actual._name
+        addressField.text=actual._address
+        phoneField.text=actual._phone
+        hoursField.text=actual._openingHours
+        smokingSwitch.setOn(actual._smoking, animated:true)
+        pricesSlider.setValue(Float(actual._ratingPrices!)/5, animated: true)
+        staffSlider.setValue(Float(actual._ratingStaff!)/5,
+                             animated: true)
+        atmosphereSlider.setValue(Float(actual._ratingAtmosphere!)/5, animated: true)
+        chicksSlider.setValue(Float(actual._ratingChicks!)/5, animated: true)
         
         // Do any additional setup after loading the view.
     }
@@ -44,12 +49,35 @@ class EditPubVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    func update(){
-    
-    
+    @IBAction func saveNewData(sender: AnyObject) {
+        
+        putData(actual._id! , name: nameField.text!, address: addressField.text!, phone: phoneField.text!, openningHours: hoursField.text!, photo: imageField.text!, rating: actual._rating!, ratingChicks: Double(chicksSlider.value), ratingAtmosphere: Double(atmosphereSlider.value), ratingPrices: Double(pricesSlider.value), ratingStaff: Double(staffSlider.value), smoking: smokingSwitch.on){ data in
+            
+            let alertController = UIAlertController(title: "Alert", message:
+                "Your edited data was successfully saved", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+        
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("NavigationController")
+            self.presentViewController(nextViewController, animated:true, completion:nil)
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
     }
+    
+    @IBAction func deletePub(sender: AnyObject) {
+        deleteData(actual._id!)
+        { data in
+        
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("NavigationController")
+            self.presentViewController(nextViewController, animated:true, completion:nil)
+            
+        }
+    }
+    
+    
+    
 
     /*
     // MARK: - Navigation

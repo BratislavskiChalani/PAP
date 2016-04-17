@@ -14,15 +14,16 @@ class BrowseVC: UIViewController, UICollectionViewDataSource,UICollectionViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        typealias  UIActivityViewControllerCompletionHandler = () -> Void
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+    
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
     }
     
@@ -43,29 +44,16 @@ class BrowseVC: UIViewController, UICollectionViewDataSource,UICollectionViewDel
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("browseCell", forIndexPath: indexPath) as! BrowseCollectionViewCell
+        cell.collectionImageView.image=pubs[indexPath.row]._image
         
-        cell.collectionImageView.image = UIImage(named: "homer_intro")
+        //cell.collectionImageView.image = UIImage(named: "homer_intro")
         cell.collectionLabel.text = pubs[indexPath.row]._name
-        
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        actual=indexPath.row
+        actual=pubs[indexPath.row]
     }
-    
-    
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        
-        if offsetY > contentHeight - scrollView.frame.size.height {
-            offset+=10
-            GETData()
-            self.collectionView.reloadData()
-        }
-    }
-    
 
     /*
     // MARK: - Navigation

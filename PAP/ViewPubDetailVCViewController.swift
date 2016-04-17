@@ -11,12 +11,13 @@ import MapKit
 
 
 
-class ViewPubDetailVCViewController: UIViewController, MKMapViewDelegate {
+class ViewPubDetailVCViewController: UIViewController, MKMapViewDelegate,  CLLocationManagerDelegate {
 
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var smokingLabel: UILabel!
+    @IBOutlet weak var entranceImage: UIImageView!
     @IBOutlet weak var rating: UIImageView!
     @IBOutlet weak var ratingPrices: UIImageView!
     @IBOutlet weak var ratingStaff: UIImageView!
@@ -24,19 +25,18 @@ class ViewPubDetailVCViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var ratingChicks: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("ACTUAL: "+String(actual))
         
         
-        print("star"+String(round(pubs[actual!]._ratingAtmosphere!)))
-        self.title=pubs[actual!]._name
-        addressLabel.text=pubs[actual!]._address
-        phoneLabel.text=pubs[actual!]._phone
-        hoursLabel.text=pubs[actual!]._openingHours
-        if pubs[actual!]._smoking{
+        print("star"+String(round(actual._ratingAtmosphere!)))
+        self.title=actual._name
+        entranceImage.image=actual._image
+        addressLabel.text=actual._address
+        phoneLabel.text=actual._phone
+        hoursLabel.text=actual._openingHours
+        if actual._smoking{
             smokingLabel.text="FAJČÁRSKE"
         }
         else{
@@ -44,21 +44,18 @@ class ViewPubDetailVCViewController: UIViewController, MKMapViewDelegate {
         }
         
         
-        ratingPrices.image = UIImage(named: "star"+String(round(pubs[actual!]._ratingPrices!)))
-        ratingStaff.image = UIImage(named: "star"+String(round(pubs[actual!]._ratingStaff!)))
-        ratingAtmosphere.image = UIImage(named: "star"+String(round(pubs[actual!]._ratingAtmosphere!)))
-        ratingChicks.image = UIImage(named: "star"+String(round(pubs[actual!]._ratingChicks!)))
+        ratingPrices.image = UIImage(named: "star"+String(round(actual._ratingPrices!)))
+        ratingStaff.image = UIImage(named: "star"+String(round(actual._ratingStaff!)))
+        ratingAtmosphere.image = UIImage(named: "star"+String(round(actual._ratingAtmosphere!)))
+        ratingChicks.image = UIImage(named: "star"+String(round(actual._ratingChicks!)))
         
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
     
-
+    }
     /*
     // MARK: - Navigation
 
